@@ -1,24 +1,23 @@
-// src/App.jsx
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import ScrollToSection from "./components/ScrollToSection";
+
+// import all pages
 import Home from "./pages/Home";
-import Projects from "./pages/Projects";
 import About from "./pages/About";
+import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-800 transition-colors">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
-    </Router>
+    <div>
+      <Navbar />
+      <ScrollToSection /> {/* 👈 This auto-scrolls to the right section when URL changes */}
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
+    </div>
   );
 }
+
 export default App;

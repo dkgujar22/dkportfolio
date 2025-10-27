@@ -2,17 +2,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 const projects = [
   {
     title: "Portfolio Website",
-    description: "A personal portfolio website built with React, Tailwind CSS, and Framer Motion.",
-    live: "https://dkgujar22.github.io/portfolio/",
+    description:
+      "A personal portfolio website built with React, Tailwind CSS, and Framer Motion.",
+    live: "https://dkgujar22.github.io/dkportfolio/",
   },
   {
     title: "E-commerce Web App",
-    description: "An e-commerce platform with product listing, cart, and checkout functionality.",
+    description:
+      "An e-commerce platform with product listing, cart, and checkout functionality.",
     live: "https://dkgujar22.github.io/MYstore/",
   },
   {
@@ -22,18 +24,22 @@ const projects = [
   },
   {
     title: "Todo App",
-    description: "A dynamic todo application using React and localStorage for data persistence.",
-    live: "https://dkgujar22.github.io/todo-ap/",
-  }
+    description:
+      "A dynamic todo application using React and localStorage for data persistence.",
+    live: "https://dkgujar22.github.io/Add-Task/",
+  },
+  {
+    title: "Digital Khata",
+    description: "A digital way to store the credit of customers",
+    live: "https://dkgujar22.github.io/shop-dashboard/",
+  },
 ];
 
 const Projects = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white px-6 py-12">
-      
-      {/* Main Content */}
-      <section className="flex-grow">
-        {/* Heading */}
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+      {/* Main Section */}
+      <section className="flex-grow px-6 py-12 pt-20" id="projects">
         <motion.div
           className="max-w-6xl mx-auto text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -42,11 +48,11 @@ const Projects = () => {
         >
           <h1 className="text-4xl font-bold mb-4">My Projects</h1>
           <p className="text-gray-300">
-            Here are some of the projects I have worked on. You can view live demos below.
+            Here are some of the projects I have worked on. You can view live
+            demos below.
           </p>
         </motion.div>
 
-        {/* Project Cards */}
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
           initial="hidden"
@@ -59,7 +65,10 @@ const Projects = () => {
             <motion.div
               key={index}
               className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition"
-              variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-2xl font-semibold mb-2">{project.title}</h2>
@@ -80,7 +89,7 @@ const Projects = () => {
       </section>
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

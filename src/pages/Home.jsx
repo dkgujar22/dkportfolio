@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center flex-grow px-6">
+      <section className="flex flex-col items-center justify-center text-center flex-grow px-6" id="home">
         <motion.h1
           className="text-4xl md:text-6xl font-bold mb-6"
           initial={{ opacity: 0, y: -30 }}
@@ -33,18 +34,18 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          <a
-            href="/projects"
+          <Link
+            to="/projects"
             className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-medium transition"
           >
             View Projects
-          </a>
+          </Link>
           
         </motion.div>
       </section>
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

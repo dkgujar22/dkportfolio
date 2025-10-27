@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       {/* Main Content */}
-      <section className="flex-grow pt-20 px-6 py-12">
+      <section className="flex-grow pt-20 px-6 py-12" id="contact">
         {/* Heading */}
         <motion.div
           className="max-w-4xl mx-auto text-center mb-12"
@@ -44,11 +44,11 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <FaEnvelope className="text-blue-400 text-xl" />
-                <span>deepakgujar700@gmail.com</span>
+                <span>deepakgujar748@gmail.com</span>
               </div>
               <div className="flex items-center gap-4">
                 <FaPhone className="text-green-400 text-xl" />
-                <span>+92 300 3168940</span>
+                <span>+92 316 8920200</span>
               </div>
               <div className="flex items-center gap-4">
                 <FaMapMarkerAlt className="text-red-400 text-xl" />

@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       {/* Main Content */}
-      <section className="flex-grow pt-20 px-6 py-12">
+      <section className="flex-grow pt-20 px-6 py-12" id="about">
         {/* About Me Section */}
         <motion.div
           className="max-w-4xl mx-auto text-center"
@@ -82,7 +82,7 @@ const About = () => {
       </section>
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
